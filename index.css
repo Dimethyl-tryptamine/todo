@@ -1,0 +1,137 @@
+/* Reset default margins and paddings for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's width */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center all content horizontally */
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+
+/* Style for the main title */
+h1 {
+    font-size: 30px;
+}
+
+/* Header title with padding and margin */
+#title {
+    margin: 20px 20px 0px 20px;
+    padding: 20px 20px 10px 20px;
+}
+
+/* Display area for selected item */
+.display {
+    width: 100%; /* Responsive width */
+    max-width: 700px; /* Set a max width for larger screens */
+    border: 2px solid white; 
+    padding: 15px;
+    aspect-ratio: 16/9; /* Maintain a square aspect ratio */
+    margin-bottom: 10px;
+    
+    
+}
+
+/* Description paragraph within the display section */
+#description {
+    margin: 10px 5px 5px 5px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif; /* Use Lato font with fallback */
+}
+
+/* Flexbox layout for the search and submit sections */
+.menu {
+    display: flex; /* Flex layout */
+    flex-wrap: wrap; /* Wrap to the next line on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between search and submit sections */
+    width: 90%; /* Responsive width */
+    max-width: 700px; /* Limit maximum width */
+    margin-bottom: 20px; /* Space below the menu */
+}
+
+/* Styles for input and button fields in both sections */
+.search, .submit {
+    display: flex; /* Flex layout for input and button alignment */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between input and button */
+}
+
+/* Style for input fields across different sections */
+.inputField, .descriptionField {
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid white; /* Light border for contrast */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    color: white; /* White text */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Limit max width for better layout */
+}
+
+/* Style specifically for the description input field */
+.descriptionField {
+    margin-top: 10px; /* Space above */
+    width: 90%; /* Responsive width */
+    max-width: 700px; /* Limit width */
+}
+
+/* General button styling */
+.button, .Button { /* Added ".button" to catch other potential buttons */
+    padding: 10px;
+    background-color: rgb(0, 13, 255); /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.button:hover, .Button:hover {
+    background-color: rgb(255, 0, 0); /* Change color on hover */
+}
+
+/* Task list container */
+.tasks {
+    width: 90%; /* Full width for smaller screens */
+    max-width: 700px; /* Limit max width */
+    margin-top: 20px; /* Space above the list */
+}
+
+/* Task list styling */
+#taskList {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    text-align: left; /* Align text to the left */
+}
+
+/* Individual task item styling */
+#taskList li {
+    padding: 10px; /* Add padding for each task */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle divider line */
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .display, .menu, .tasks, .descriptionField {
+        width: 100%; /* Full width on smaller screens */
+        padding: 10px;
+    }
+
+    #title {
+        font-size: 24px; /* Slightly smaller title for compact screens */
+    }
+}

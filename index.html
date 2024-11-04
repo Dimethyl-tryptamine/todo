@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">My Todo List</h1>
+    </header>
+
+    <div class="display">
+        <h2 id="itemOnDisplay"></h2> <!-- this is where the title of the searched task will be displayed  -->
+        <p id="description"> <!-- this is where the description of the searched task will be displayed  -->
+            
+        </p>
+        
+
+    </div>
+
+
+    <div class="menu">
+
+        <div class="submit">
+            <input type="text" class="inputField" placeholder="Task title..."> <!-- this is where users type their title for adding a new task -->
+            <button id="submitButton" class="Button">Submit</button>
+        </div>
+
+        <div class="search">
+            <input type="search" class="inputField" placeholder="Search tasks..."> <!-- here users can search for previously made tasks to display them must be type correctly (case sensative) -->
+            <button id="searchButton" class="Button">Search</button>
+        </div>
+    
+    </div>
+    <input type="text" class="descriptionField" placeholder="Describe task..."> <!-- here users can give their new task a description before submitting it with a title -->
+    
+    <div class="tasks">
+        <h2>List:</h2>
+        <ul id="taskList">
+            <!-- add items here to be added to list by user use ( <li> item <li> ) -->
+
+        </ul>
+    </div>
+    
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
